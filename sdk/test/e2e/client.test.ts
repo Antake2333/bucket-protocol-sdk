@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it } from 'bun:test';
 
 import { BucketClient } from '@/index';
 import { COINS_TYPE_LIST } from '@/constants';
@@ -45,6 +45,7 @@ describe('Interacting with Bucket Client on mainnet', () => {
 
   it('tests getPrices() function', async () => {
     const prices = await buck.getPrices();
+    console.log(prices);
     expect(prices).toBeDefined();
   });
 
